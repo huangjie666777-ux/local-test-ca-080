@@ -1,8 +1,3 @@
-from fastapi import FastAPI
+from .main_app import create_app
 
-app = FastAPI(title="Local Test CA")
-
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+app = create_app()
